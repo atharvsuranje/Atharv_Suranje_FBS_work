@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-int isPerfect(int);
+void isPerfect(int);
 void main() {
     int n = 28;
     isPerfect(n);
 }
 
-int isPerfect(int n){
+void isPerfect(int n){
     int sum = 0;
     for (int i = 1; i < n; i++) {
         if (n % i == 0) sum += i;
