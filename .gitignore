@@ -1,0 +1,32 @@
+# === C / C++ ===
+*.o
+*.obj
+*.so
+*.dll
+*.exe
+*.out
+*.a
+*.gch
+
+# === Java ===
+*.class
+*.jar
+*.war
+*.ear
+*.log
+
+# === Common build folders ===
+bin/
+build/
+dist/
+target/
+out/
+
+# === IDE / Editor folders ===
+.vscode/
+.idea/
+*.iml
+
+# === System files ===
+.DS_Store        # macOS
+Thumbs.db        # Windows

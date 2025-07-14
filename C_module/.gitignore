@@ -1,0 +1,23 @@
+# --- Compiled binary files ---
+*.exe
+*.out
+*.o
+*.obj
+
+# --- Build and debug folders ---
+build/
+debug/
+dist/
+
+# --- Temporary or backup files ---
+*.log
+*.tmp
+*.bak
+*~
+
+# --- VS Code settings ---
+.vscode/
+
+# --- OS-specific ---
+.DS_Store         # macOS
+Thumbs.db         # Windows

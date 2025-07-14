@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int n;
+void armstrongRange();
+void main() {
+    printf("Enter upper limit: ");
+    scanf("%d", &n);
+    printf("Armstrong numbers from 1 to %d:\n", n);
+    armstrongRange();
+
+}
+void armstrongRange(){
+    
+    for (int num = 1; num <= n; num++) {
+        int temp = num, count = 0;
+    
+        while (temp != 0) {
+            count++;
+            temp /= 10;
+        }
+    
+        temp = num;
+        int sum = 0;
+        while (temp != 0) {
+            int digit = temp % 10;
+            int power = 1;
+            for (int i = 1; i <= count; i++) power *= digit;
+            sum += power;
+            temp /= 10;
+        }
+    
+        if (sum == num) printf("%d ", num);
+    }
+
+}
