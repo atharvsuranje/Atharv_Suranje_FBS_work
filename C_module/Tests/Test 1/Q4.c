@@ -17,7 +17,7 @@ void main() {
         hrdiff=diff/3600;
         mindiff=(diff%3600)/60;
         secdif=diff%60;
-        print("Greater by :: %d %d %d",hrdiff,mindiff,secdif);
+        printf("Greater by :: %d hr %d min %d sec",hrdiff,mindiff,secdif);
 
     }
     else if(totalTime1<totalTime2) {
@@ -26,7 +26,7 @@ void main() {
         hrdiff=diff/3600;
         mindiff=(diff%3600)/60;
         secdif=diff%60;
-        print("Greater by :: %d %d %d",hrdiff,mindiff,secdif);
+        printf("Greater by :: %d hr %d min %d sec",hrdiff,mindiff,secdif);
     }
     else printf("Same");
 
