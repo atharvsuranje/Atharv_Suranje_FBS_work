@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+void displayEvenOdd(int*,int);
+void main() {
+    int n,sum=0;
+    printf("Size of array :: ");
+    scanf("%d",&n);
+    int arr[n];
+    printf("Enter array Elements :: ");
+    for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+
+    printf("\nElements are :: ");
+    for(int i=0;i<n;i++){
+        printf("%d ",arr[i]);
+    }
+    displayEvenOdd(arr,n);
+    
+}
+
+void displayEvenOdd(int* arr,int n){
+    printf("\nEven :: ");
+    for(int i=0;i<n;i++){
+        if(arr[i]%2 == 0) printf("%d ",arr[i]);
+    }
+    printf("\nOdd :: ");
+    for(int i=0;i<n;i++){
+        if(arr[i]%2 != 0) printf("%d ",arr[i]);
+    }
+}
