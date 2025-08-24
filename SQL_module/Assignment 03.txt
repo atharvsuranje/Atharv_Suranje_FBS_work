@@ -1,0 +1,97 @@
+1. Write a SQL statement to insert a record as follows:
+ Employees :
+ Department :
+
+mysql> create table Departments(
+    -> department_id int primary key,department_name varchar(30),manager_id int,location_id int);
+Query OK, 0 rows affected (0.11 sec)
+
+mysql> create table Employees(
+    -> employee_id int primary key,first_name varchar(20),last_name varchar(20),email varchar(40) unique,phone_number varchar(20),hire_date date,job_id varchar(20),salary decimal(10,2),commission_pct decimal(5,2),manager_id int,department_id int,
+    -> foreign key(department_id) references Departments(department_id));
+Query OK, 0 rows affected (0.10 sec)
+
+mysql> insert into departments values
+    -> (10,'Administration',200,1700),
+    -> (20,'Marketing',201,1800),
+    -> (30,'Purchasing',114,1700),
+    -> (40,'Human Resources',203,2400),
+    -> (50,'Shipping',121,1500),
+    -> (60,'IT',103,1400),
+    -> (70,'Public Relations',204,2700),
+    -> (80,'Sales',145,2500);
+Query OK, 8 rows affected (0.06 sec)
+Records: 8  Duplicates: 0  Warnings: 0
+
+mysql> insert into employees values
+    -> (100,'Steven','King','SKING','515.123.4567','1987-06-17','AD_PRES',24000,0,200,10),
+    -> (101,'Neena','Kochhar','NKOCHHAR','515.123.4568','1987-06-18','AD_VP',17000,0,200,10),
+    -> (102,'Lex','De Haan','LDEHAAN','515.123.4569','1987-06-19','AD_VP',17000,0,200,10),
+    -> (103,'Alexander','Hunold','AHUNOLD','590.423.4567','1987-06-20','IT_PROG',9000,0,103,60),
+    -> (104,'Bruce','Ernst','BERNST','590.423.4568','1987-06-21','IT_PROG',6000,0,103,60),
+    -> (105,'David','Austin','DAUSTIN','590.423.4569','1987-06-22','IT_PROG',4800,0,103,60),
+    -> (106,'Valli','Pataballa','VPATABAL','590.423.4560','1987-06-23','IT_PROG',4800,0,103,60),
+    -> (107,'Diana','Lorentz','DLORENTZ','590.423.5567','1987-06-24','IT_PROG',4200,0,114,30),
+    -> (108,'Nancy','Greenberg','NGREENBE','515.124.4569','1987-06-25','SA_MAN',12000,0,145,80),
+    -> (109,'Daniel','Faviet','DFAVIET','515.124.4169','1987-06-26','SA_MAN',9000,0,145,80);
+Query OK, 10 rows affected (0.04 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+mysql> create table Jobs(
+    -> job_id varchar(15) primary key,job_title varchar(30) not null,min_salary int,max_salary int);
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> insert into Jobs values
+    -> ('AD_PRES','President',20000,40000),
+    -> ('AD_VP','Administration Vice President',15000,30000),
+    -> ('AD_ASST','Administration Assistant',3000,6000),
+    -> ('FI_MGR','Finance Manager',8200,16000),
+    -> ('FI_ACCOUNT','Accountant',4200,9000),
+    -> ('AC_MGR','Accounting Manager',8200,16000),
+    -> ('AC_ACCOUNT','Public Accountant',4200,9000),
+    -> ('SA_MAN','Sales Manager',10000,20000);
+Query OK, 8 rows affected (0.03 sec)
+Records: 8  Duplicates: 0  Warnings: 0
+
+
+3. Write a SQL statement to insert one row in jobs table to ensure that no duplicate value will be entered in the job_id column.
+
+mysql> create table Jobs(
+    -> job_id varchar(15) primary key,job_title varchar(30) not null,min_salary int,max_salary int);
+Query OK, 0 rows affected (0.06 sec)
+
+mysql> insert into Jobs values
+    -> ('AD_PRES','President',20000,40000),
+    -> ('AD_VP','Administration Vice President',15000,30000),
+    -> ('AD_ASST','Administration Assistant',3000,6000),
+    -> ('FI_MGR','Finance Manager',8200,16000),
+    -> ('FI_ACCOUNT','Accountant',4200,9000),
+    -> ('AC_MGR','Accounting Manager',8200,16000),
+    -> ('AC_ACCOUNT','Public Accountant',4200,9000),
+    -> ('SA_MAN','Sales Manager',10000,20000);
+Query OK, 8 rows affected (0.03 sec)
+Records: 8  Duplicates: 0  Warnings: 0
+
+
+4. Write SQL statement to increment salary of each emp by 10%.
+
+mysql> update employees set salary=salary*1.10;
+Query OK, 10 rows affected (0.03 sec)
+Rows matched: 10  Changed: 10  Warnings: 0
+
+
+5. Write a SQL statement to change the email column of employees table with 'not available' for those employees whose department_id is 80 and gets a commission is less than .20%
+
+mysql> update employees set email=null where department_id=80 and commission_pct<0.20;
+Query OK, 2 rows affected (0.03 sec)
+Rows matched: 2  Changed: 2  Warnings: 0
+
+
+6. Write a SQL statement to change the email column of employees table with 'not available' for those employees who belongs to the 'Purchasing' department.
+
+
+7. Write a SQL statement to change the email and commission_pct column of employees table with 'not available' and 0.10 for all employees.
+
+mysql> update employees set email='Not Available',commission_pct=0.10;
+Query OK, 10 rows affected (0.02 sec)
+Rows matched: 10  Changed: 10  Warnings: 0
