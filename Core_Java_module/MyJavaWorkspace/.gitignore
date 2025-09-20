@@ -1,0 +1,45 @@
+# ------------------------------
+# Compiled class files
+# ------------------------------
+*.class
+
+# ------------------------------
+# Eclipse-specific files/folders
+# ------------------------------
+.metadata/
+*.tmp
+*.bak
+*.swp
+.settings/
+.project
+.classpath
+
+# ------------------------------
+# Build output folders
+# ------------------------------
+bin/
+build/
+
+# ------------------------------
+# Logs, temporary files
+# ------------------------------
+*.log
+*.tmp
+*~
+
+# ------------------------------
+# OS-specific files
+# ------------------------------
+.DS_Store
+Thumbs.db
+
+# ------------------------------
+# Optional: ignore JARs generated locally
+# ------------------------------
+*.jar
+
+# ------------------------------
+# Optional: ignore any IDE-specific files (other than Eclipse)
+# ------------------------------
+.vscode/
+.idea/
