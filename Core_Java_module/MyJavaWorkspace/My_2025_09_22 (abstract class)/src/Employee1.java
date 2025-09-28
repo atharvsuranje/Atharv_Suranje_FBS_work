@@ -1,15 +1,15 @@
-class Employee{
+abstract class Employee1{
 	int id;
 	String name;
 	double salary;
 
-	Employee(){
+	Employee1(){
 		this.name="Test";
 		this.id=101;
 		this.salary=9999.12;
 	}
 
-	Employee(String n,int i,double s){
+	Employee1(String n,int i,double s){
 		this.name=n;
 		this.id=i;
 		this.salary=s;
@@ -46,21 +46,19 @@ class Employee{
 		System.out.println("Salary is : "+this.salary);
 	}
 
-	double calSalary() {
-		return this.salary;
-	}
+	abstract double calSalary();
 	
 } //Employee ends here
 
-class HR extends Employee{
+class HR1 extends Employee1{
 	double commission;
 
-	HR() {
+	HR1() {
 		super();
 		this.commission = 0;
 	}
 
-	HR(String name,int id,double salary,double commission) {
+	HR1(String name,int id,double salary,double commission) {
 		super(name,id,salary);
 		this.commission = commission;
 	}
@@ -85,17 +83,17 @@ class HR extends Employee{
 	}
 } //HR ends here
 
-class SalesManager extends Employee{
+class SalesManager1 extends Employee1{
 	double incentive;
 	int target;
 	
-	SalesManager() {
+	SalesManager1() {
 		super();
 		this.incentive = 100;
 		this.target = 0;
 	} 
 	
-	SalesManager(String name,int id,double salary,double incentive, int target) {
+	SalesManager1(String name,int id,double salary,double incentive, int target) {
 		super(name,id,salary);
 		this.incentive = incentive;
 		this.target = target;
@@ -127,14 +125,14 @@ class SalesManager extends Employee{
 	}
 } //SalesManager ends here
 
-class Admin extends Employee{
+class Admin1 extends Employee1{
 	double allowance;
 
-	Admin() {
+	Admin1() {
 		super();
 		this.allowance = 0;
 	}
-	Admin(String name,int id,double salary,double allowance) {
+	Admin1(String name,int id,double salary,double allowance) {
 		super(name,id,salary);
 		this.allowance = allowance;
 	}
@@ -156,51 +154,41 @@ class Admin extends Employee{
 	}
 } //Admin ends here
 
-class AreaSalesManager extends SalesManager{
-	String areaName;
-	
-	AreaSalesManager(){
-		super();
-		this.areaName="Pune";
-	}
 
-	AreaSalesManager(String name,int id,double salary,double incentive,int target,String areaName) {
-		super(name,id,salary,incentive,target);
-		this.areaName = areaName;
-	}
-	
-	void display() {
-		super.display();
-		System.out.println("Area Name is : "+this.areaName);
-	}
-	
-	double calSalary() {
-		return this.salary+this.incentive;
-	}
-}
-class TestEmployee{
+class TestEmployee1{
 	public static void main(String[] a){
-		Employee e1;
-		e1=new Employee("Atharv",101,20000);
-		e1.display();
-		System.out.println("Employee Salary : "+e1.calSalary());
+		Employee1 e1;
 		
-		e1=new SalesManager("Hari",102,30000,3000,20);
-		e1.display();
-		System.out.println("Sales Manager Salary : "+e1.calSalary());
+		e1=new SalesManager1("Hari",102,30000,3000,20);
+		TestEmployee1.myFun(e1);
 		
-		e1=new Admin("Soham",103,40000,4000);
-		e1.display();
-		System.out.println("Admin Salary : "+e1.calSalary());
+		e1=new Admin1("Soham",103,40000,4000);
+		TestEmployee1.myFun(e1);
 		
-		e1=new HR("Pranav",104,50000,5000);
-		e1.display();
-		System.out.println("HR Salary : "+e1.calSalary());
+		e1=new HR1("Pranav",104,50000,5000);
+		TestEmployee1.myFun(e1);
 		
-		e1=new AreaSalesManager("Nishikant",105,60000,6000,60,"Akola");
-		e1.display();
-		System.out.println("Area Sales Manager Salary : "+e1.calSalary());
 	} //main ends here
+	
+	static void myFun(Employee1 e1) {
+		System.out.println(e1.getName());
+		System.out.println(e1.calSalary());
+		
+		if(e1 instanceof SalesManager1) {
+			SalesManager1 sm1=(SalesManager1) e1;
+			System.out.println(sm1.getIncentive());
+		}
+		
+		if(e1 instanceof HR1) {
+			HR1 hr1=(HR1) e1;
+			System.out.println(hr1.getCommission());
+		}
+		
+		if(e1 instanceof Admin1) {
+			Admin1 a1=(Admin1) e1;
+			System.out.println(a1.getAllowance());
+		}
+	}
 } //TestEmployee ends here
 
 

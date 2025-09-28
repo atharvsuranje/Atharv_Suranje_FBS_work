@@ -1,4 +1,4 @@
-class Employee{
+abstract class Employee{
 	int id;
 	String name;
 	double salary;
@@ -46,9 +46,7 @@ class Employee{
 		System.out.println("Salary is : "+this.salary);
 	}
 
-	double calSalary() {
-		return this.salary;
-	}
+	abstract double calSalary();
 	
 } //Employee ends here
 
@@ -156,7 +154,7 @@ class Admin extends Employee{
 	}
 } //Admin ends here
 
-class AreaSalesManager extends SalesManager{
+class AreaSalesManager extends SalesManager1{
 	String areaName;
 	
 	AreaSalesManager(){
@@ -181,9 +179,9 @@ class AreaSalesManager extends SalesManager{
 class TestEmployee{
 	public static void main(String[] a){
 		Employee e1;
-		e1=new Employee("Atharv",101,20000);
-		e1.display();
-		System.out.println("Employee Salary : "+e1.calSalary());
+//		e1=new Employee("Atharv",101,20000);
+//		e1.display();
+//		System.out.println("Employee Salary : "+e1.calSalary());
 		
 		e1=new SalesManager("Hari",102,30000,3000,20);
 		e1.display();
@@ -197,9 +195,7 @@ class TestEmployee{
 		e1.display();
 		System.out.println("HR Salary : "+e1.calSalary());
 		
-		e1=new AreaSalesManager("Nishikant",105,60000,6000,60,"Akola");
-		e1.display();
-		System.out.println("Area Sales Manager Salary : "+e1.calSalary());
+		
 	} //main ends here
 } //TestEmployee ends here
 
