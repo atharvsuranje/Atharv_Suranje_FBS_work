@@ -4,7 +4,8 @@ int wordCounter(char*);
 void main() {
     char str[20];
     printf("Enter string : ");
-    scanf(" %[^\n]",str);
+    gets(str);
+    // scanf(" %[^\n]",str);
     printf("Number of Words are : %d",wordCounter(str));
 }
 

@@ -1,0 +1,35 @@
+create procedure proc_with_cur(addr varchar(100))  -- creating procedure
+begin
+    declare id,sal int;  -- declaring variables
+    declare is_finish int default 0;
+    
+    declare update_cur cursor for select eid,salary from employee where address=addr;  -- declaring cursor
+    declare continue handler for not found set is_finish=1;  -- declaring flag to handle the error
+    
+    open update_cur;  -- opening cursor
+    myloop : loop  -- loop start
+        fetch update_cur into id,sal;   -- fetching id and sal 
+        if(is_finish=1) then leave myloop;  -- if there is nothing to fetch then exiting the loop
+        end if;
+
+        if(sal>=55000) then  -- basic query
+            update employee set salary=salary*1.1 where eid=id;
+        else
+            update employee set salary=salary*1.2 where eid=id;
+        end if;
+
+    end loop myloop; -- ending loop
+    
+    close update_cur; -- closing the loop
+
+end -- ending the procedure
+
+
+
+create function updateAddress(id int,newAdd varchar(100))
+returns varchar(50)
+deterministic
+begin
+    update employee set address=newAdd where eid=id;
+    return newAdd;
+end

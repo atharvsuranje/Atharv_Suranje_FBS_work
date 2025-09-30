@@ -7,18 +7,19 @@ void main() {
     scanf("%s",str);
     printf("Enter target character : ");
     scanf(" %c",&target);
-    if(search(str,target) == 1 ) printf("Character found.");
+    int result =search(str,target);
+    if( result>=0) printf("Character found at %d",result);
     else printf("Character NOT found");
     
 }
 int search(char* str,char target){
-    int i=0,flag=0;
+    int i=0;
     while (str[i] != '\0'){
         if(str[i] == target) {
-            flag=1;
+            return i;
             break;
         }
         i++;
     }
-    return flag;
+    return -1;
 }
