@@ -54,7 +54,7 @@ This repository serves as a personal archive of all the coursework, assignments,
 📂 Organized Structure: The repository is neatly organized into modules, assignments, and practice sessions, making it easy to navigate and find specific solutions.
 
 📁 Project Structure
-Bash
+```
 
 └── Atharv_Suranje_FBS_work/
     ├── C_module
@@ -68,6 +68,8 @@ Bash
         ├── Assignment 01.txt
         ├── ... (Assignments 2-5)
         └── Test
+```
+
 📂 Project Index
 <details open>
 <summary><b><code>ATHARV_SURANJE_FBS_WORK/</code></b></summary>
@@ -171,22 +173,20 @@ SQL: An SQL database client (e.g., MySQL Workbench, DBeaver) connected to a data
 ⚙️ Installation
 Clone the repository:
 
-Bash
+```
 
 ❯ git clone https://github.com/atharvsuranje/Atharv_Suranje_FBS_work
 Navigate to the project directory:
-
-Bash
-
+```
+```
 ❯ cd Atharv_Suranje_FBS_work
 No further installation is required. You can now browse and use the files.
+```
 
 🤖 Usage
 The files in this repository are individual scripts and programs. You need to compile/run them separately.
 
 For C files:
-
-Bash
 
 # Navigate to a specific assignment folder
 cd C_module/Assignment\ 1
@@ -198,24 +198,25 @@ gcc Q1.c -o Q1
 ./Q1
 For Java files:
 
-Bash
-
+```
 # Navigate to the source folder of a Java project
 cd Core_Java_module/Practice/9-8-2025\ \(Constructors\)/
-
+```
+```
 # Compile the .java file (e.g., Book.java)
 javac Book.java
-
+```
+```
 # Run the main class
 java Book
 For SQL files:
+```
 
 SQL scripts are intended to be run in a database management tool. You can copy the content of a .txt file and execute it in your SQL client or run it from the command line.
-
-Bash
-
 # Example for running a script via MySQL CLI
+```
 mysql -u your_username -p your_database_name < SQL_module/Assignment\ 01.txt
+```
 📌 Project Roadmap
 [X] Foundation: Complete all assignments for C, basic Java, and SQL.
 
