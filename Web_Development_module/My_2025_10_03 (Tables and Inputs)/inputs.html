@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs</title>
+</head>
+<body>
+    <form action="/dummy">
+        <table  cellpadding="10">
+            <tr>
+                <td>Enter Username :</td>
+                <td><input type="text" name="username"></td>
+            </tr>
+            <tr>
+                <td>Enter Email :</td>
+                <td><input type="email" name="email"></td>
+            </tr>
+            <tr>
+                <td>Enter Password :</td>
+                <td><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td>Enter Age :</td>
+                <td><input type="number" name="age"></td>
+            </tr>
+            <tr>
+                <td>Enter Mobile No :</td>
+                <td><input type="tel" pattern="[0-9]{10}" name="phone"></td>
+            </tr>
+            <tr>
+                <td>Enter Description :</td>
+                <td><textarea rows="5" cols="15" name="description"></textarea></td>
+            </tr>
+            <tr>
+                <td>Enter DOB :</td>
+                <td><input type="date" name="dob"></td>
+            </tr>
+            <tr>
+                <td>Enter Favourite Color :</td>
+                <td><input type="color" name="color"></td>
+            </tr>
+            <tr>
+                <td>Enter Rating :</td>
+                <td><input type="range" min="0" max="10" name="rating"></td>
+            </tr>
+            <tr>
+                <td><input type="submit"></td>
+                <td><input type="reset"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
