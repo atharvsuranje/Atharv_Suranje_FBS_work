@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5 Question 1</title>
+</head>
+<body>
+    <h1>Registration Forrm</h1>
+    <hr>
+
+    <form action="submit.html">
+        <label for="fullname">Full Name :</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your name" required><br><br>
+
+        <label for="email">Email ID :</label>
+        <input type="email" id="email" name="email" placeholder="youremail@xyz.com" required><br><br>
+
+        <label for="phone">Mobile Number :</label>
+        <input type="tel" id="phone" name="phone" placeholder="eg 9876543210" pattern="[0-9]{10}" required><br><br>
+
+        <label for="position">Applying For :</label>
+        <input type="text" id="position" name="position" placeholder="eg Frontend developer" required><br><br>
+
+        <label for="exp">Experience (in Years) :</label>
+        <input type="number" id="exp" name="exp" min="0" max="30" value="0"><br><br>
+
+        <label for="interview">Preferred Interview Date :</label>
+        <input type="date" id="interview" name="interview"><br><br>
+
+        <label for="resume">Upload Resume (PDF) :</label>
+        <input type="file" id="resume" name="resume" accept=".pdf"><br><br>
+
+        <label>Gender :</label><br>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label><br>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label><br>
+        <input type="radio" id="other" name="gender" value="Other">
+        <label for="other">others</label><br><br>
+
+        <label>Technical Skill (can be Multiple)</label><br>
+        <input type="checkbox" name="skills" id="Java">
+        <label for="Java">Java</label><br>
+        <input type="checkbox" name="skills" id="Python">
+        <label for="Python">Python</label><br>
+        <input type="checkbox" name="skills" id="SQL">
+        <label for="SQL">SQL</label><br>
+        <input type="checkbox" name="skills" id="Web">
+        <label for="Web">Web Development</label><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>

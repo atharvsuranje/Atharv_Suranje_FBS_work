@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5 Question 2</title>
+</head>
+<body>
+    <h1>FirstBit Solutions</h1>
+    <img src="https://i.postimg.cc/9FLzZYBS/logo.jpg" alt="logo" height="100px">
+    <br><br>
+    <a href="https://firstbitsolutions.com/">FirstBitSolutions.com</a>
+    <p><i>Your Future begins here!</i></p>
+    <hr>
+
+    <h2><u>Student Registration Form</u></h2>
+    <br>
+
+    <label for="name"><b>Full Name:</b></label><br>
+    <input type="text" name="name" id="name" placeholder="Enter your full name" required><br><br>
+
+    <label for="email"><b>Email ID:</b></label><br>
+    <input type="email" name="email" id="email" placeholder="example@email.com" required><br><br>
+
+    <label for="phone"><b>Phone Number:</b></label><br>
+    <input type="tel" name="phone" id="phone" placeholder="e.g 9876543210" pattern="[0-9]{10}" required><br><br>
+
+    <label for="dob"><b>Birth Date:</b></label><br>
+    <input type="date" name="dob" id="dob"><br><br>
+
+    <label><b>Select Gender:</b></label>
+    <input type="radio" name="gender" id="male" value="Male">
+    <label for="male">Male</label><br>
+    <input type="radio" name="gender" id="female" value="Female">
+    <label for="female">Female</label><br>
+    <input type="radio" name="gender" id="other" value="Other">
+    <label for="other">Other</label><br><br>
+    
+    <label><b>Courses Interested In:</b></label><br>
+    <input type="checkbox" name="course" id="java" value="Java">
+    <label for="java">Java Full Stack</label><br>
+    <input type="checkbox" name="course" id="python" value="Python">
+    <label for="python">Python Full Stack</label><br>
+    <input type="checkbox" name="course" id="reactJs" value="React JS">
+    <label for="reactJs">React JS</label><br>
+    <input type="checkbox" name="course" id="dataScience" value="Data Science">
+    <label for="dataScience">Data Science</label><br><br>
+
+    <label for="time"><b>Preferred Batch Timings:</b></label><br>
+    <select name="time" id="time">
+        <option value="" disabled selected>-- Select --</option>
+        <option value="morning">8:00 AM - 11:00 AM</option>
+        <option value="afternoon">1:00 PM - 4:00 PM</option>
+        <option value="evening">6:00 PM - 9:00 PM</option>
+    </select><br><br>
+
+    <label for="description"><b>Write About Yourself:</b></label><br>
+    <textarea name="description" id="description" placeholder="Tell us about yourself..." rows="3" cols="50"></textarea><br><br>
+
+    <label for="rating"><b>Rate Your Current Skill Level (1-10):</b></label><br>
+    <input type="number" name="rating" id="rating" min="0" max="10"><br><br>
+
+    <input type="submit" value="Submit Form">
+    <input type="reset" value="Reset Form">
+    <hr>
+
+    <p><b>Address: </b>Aditya Centeegra Office no 7, 3rd floor Near IDBI Bank, Dnyaneshwar Paduka chowk, Fergusson College Rd, Pune, Maharashtra 411005</p>
+</body>
+</html>
