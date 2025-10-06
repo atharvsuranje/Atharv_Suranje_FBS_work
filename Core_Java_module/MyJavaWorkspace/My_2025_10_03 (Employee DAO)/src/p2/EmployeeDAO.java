@@ -14,9 +14,9 @@ public class EmployeeDAO {
 		empArr[empCount++] = new HR(105, "Vikas", 49000, 4800);
 		empArr[empCount++] = new HR(106, "Nisha", 51000, 5200);
 
-		empArr[empCount++] = new SalesManager(204, "Rahul", 61000, 14, 8500);
-		empArr[empCount++] = new SalesManager(205, "Tina", 59000, 13, 7800);
-		empArr[empCount++] = new SalesManager(206, "Deepak", 63000, 11, 9200);
+		empArr[empCount++] = new SalesManager(204, "Rahul", 61000, 8500, 14);
+		empArr[empCount++] = new SalesManager(205, "Tina", 59000, 7800, 13);
+		empArr[empCount++] = new SalesManager(206, "Deepak", 63000, 9200, 11);
 
 		empArr[empCount++] = new Admin(305, "Kavita", 69000, 9700);
 		empArr[empCount++] = new Admin(306, "Manoj", 74000, 11500);
