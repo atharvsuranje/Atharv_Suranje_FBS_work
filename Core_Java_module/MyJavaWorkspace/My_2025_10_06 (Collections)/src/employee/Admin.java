@@ -1,4 +1,4 @@
-package p1;
+package employee;
 
 public class Admin extends Employee{
 	private double allowance;

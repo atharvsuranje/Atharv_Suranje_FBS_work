@@ -1,4 +1,4 @@
-package p1;
+package employee;
 
 public class SalesManager extends Employee{
 	private double incentive;

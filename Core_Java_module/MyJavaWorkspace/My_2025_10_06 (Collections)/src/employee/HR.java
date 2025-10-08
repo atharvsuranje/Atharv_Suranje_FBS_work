@@ -1,4 +1,4 @@
-package p1;
+package employee;
 
 public class HR extends Employee{
 	private double commission;

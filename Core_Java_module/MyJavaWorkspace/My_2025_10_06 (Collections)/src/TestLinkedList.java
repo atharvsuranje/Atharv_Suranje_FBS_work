@@ -1,5 +1,6 @@
 import java.util.LinkedList;
-import p1.*;
+
+import employee.*;
 
 public class TestLinkedList {
 
