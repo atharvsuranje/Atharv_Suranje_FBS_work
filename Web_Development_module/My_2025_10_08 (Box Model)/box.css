@@ -1,0 +1,39 @@
+.card{
+    border: 5px solid black;
+    width: 400px;
+    margin: auto;
+    text-align: justify;
+}
+
+.card>h1{
+    text-align: center;
+    border-bottom: 5px solid black;
+    padding-bottom: 5px;
+}
+
+.card>p{
+    border-bottom: 5px solid black;
+    padding-bottom: 5px;
+    border-top: 5px solid black;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.card>button{
+    background-color: aqua;
+    color: purple;
+    margin: 20px;
+    width: 110px;
+    height: 45px;
+    font-size: larger;
+    text-align: justify;
+}
+
+.card>img{
+    display: block;
+    margin: auto;
+    height: 300px;
+    border: 3px dashed black;
+    border-radius: 6px;
+}
