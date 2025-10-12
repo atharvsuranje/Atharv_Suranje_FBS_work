@@ -1,0 +1,27 @@
+body{
+    background-color: pink;
+}
+.login{
+    border: 2px solid black;
+    margin:15% auto;
+    text-align: center;
+    max-width: 400px;
+    background-color: aquamarine;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.login form *{
+    margin: 10px;
+    padding: 5px;
+}
+
+.form a{
+    position: absolute;
+    left: 10px;
+}
+
+.button {
+    position: absolute;
+    right: 10px;
+}
