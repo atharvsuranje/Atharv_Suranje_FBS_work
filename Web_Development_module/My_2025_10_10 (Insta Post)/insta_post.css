@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #050000;
+    display: flex;
+    justify-content: center;
+    padding: 80px 0;
+}
+
+.post {
+    width: 420px;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+}
+
+.profilePic img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e1306c;
+}
+
+.details {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.userName p {
+    font-weight: bold;
+    color: #262626;
+}
+
+.location p {
+    font-size: 13px;
+    color: #6c6c6c;
+}
+
+.menu img {
+    width: 20px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.postPic img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.utilities {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+}
+
+.LCS img,.save img {
+    width: 24px;
+    height: 25px;
+    margin-right: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in;
+}
+
+.LCS img:hover,.save img:hover {
+    transform: scale(1.2);
+}
+
+.likedBy, .caption {
+    padding: 0 14px 10px;
+}
+
+.likedBy p {
+    font-weight: 600;
+    color: #262626;
+    margin-top: 5px;
+}
+
+.caption p {
+    color: #262626;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.post:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    transition: box-shadow 0.3s ease;
+}
+
+.like:hover {
+    fill: #e1306c;
+    filter: invert(27%) sepia(95%) saturate(6565%) hue-rotate(348deg) brightness(95%) contrast(95%);
+}
+
+/* Save button hover effect - filled black bookmark */
+.save img:hover {
+    fill: #050000;
+}
