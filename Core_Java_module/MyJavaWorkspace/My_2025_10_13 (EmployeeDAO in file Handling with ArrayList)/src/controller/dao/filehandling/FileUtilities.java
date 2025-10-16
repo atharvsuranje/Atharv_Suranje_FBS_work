@@ -14,24 +14,35 @@ import model.Employee;
 public class FileUtilities {
 	
 	public static void writeToFile(ArrayList<Employee> empArr, String filePath) {
+		FileOutputStream fos = null;
+		ObjectOutputStream oos=null;
 		try {
-			FileOutputStream fos =new FileOutputStream(filePath);
-			DataOutputStream dos =new DataOutputStream(fos);
-			ObjectOutputStream oos=new ObjectOutputStream(dos);
+			fos=new FileOutputStream(filePath);
+			oos=new ObjectOutputStream(fos);
 			oos.writeObject(empArr);
 			System.out.println("Data saved to the file");
 		} 
 		catch (IOException e) {
 			System.out.println("File Not Found");
 		}
+		finally {
+			try {
+				fos.close();
+				oos.close();
+			} 
+			catch (IOException e) {
+				System.out.println("File Couldn't be Closed.");
+			}
+		}
 	}
 	
 	public static ArrayList<Employee> readFromFile(String filePath){
 		ArrayList<Employee> empArr=new ArrayList<Employee>();
+		FileInputStream fis =null;
+		ObjectInputStream ois =null;
 		try {
-			FileInputStream fis = new FileInputStream(filePath);
-			DataInputStream dis = new DataInputStream(fis);
-			ObjectInputStream ois = new ObjectInputStream(dis);
+			fis= new FileInputStream(filePath);
+			ois = new ObjectInputStream(fis);
 			Object tempObj =ois.readObject();
 			if(tempObj instanceof ArrayList) {
 				empArr = (ArrayList<Employee>) tempObj;
