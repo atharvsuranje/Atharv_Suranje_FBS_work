@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+    <script>
+        function add(){
+            val1 = parseInt(document.getElementById("input1").value);  
+            val2 = parseInt(document.getElementById("input2").value); 
+            document.getElementById("addition").innerText = val1+val2
+        }
+        function subtract(){
+            val1 = parseInt(document.getElementById("input1").value);  
+            val2 = parseInt(document.getElementById("input2").value); 
+            document.getElementById("subtraction").innerText = val1-val2
+        }
+        function multiply(){
+            val1 = parseInt(document.getElementById("input1").value);  
+            val2 = parseInt(document.getElementById("input2").value); 
+            document.getElementById("multiplication").innerText = val1*val2
+        }
+        function divide(){
+            val1 = parseInt(document.getElementById("input1").value);  
+            val2 = parseInt(document.getElementById("input2").value); 
+            document.getElementById("division").innerText = val1/val2
+        }
+
+        function displayImage(){
+            imageUrl=document.getElementById("url").value
+            borderColor=document.getElementById("color").value
+            imageSize=document.getElementById("imageSize").value
+            image=document.getElementById("image")
+            image.src=imageUrl
+            image.style.border=`5px solid ${borderColor}`
+            image.style.width=`${imageSize}%`
+        }
+    </script>
+</head>
+<body>
+    <label for="input1">Input 1 :</label>
+    <input id="input1" type="text" placeholder="Enter 1st Number"><br><br>
+    <label for="input2">Input 2 :</label>
+    <input id="input2" type="text" placeholder="Enter 2nd Number"><br><br>
+    <button onclick=add()>Add</button>
+    <button onclick=subtract()>Subtract</button>
+    <button onclick=multiply()>Multiply</button>
+    <button onclick=divide()>Divide</button><br><br>
+    <span id="addition">Addition Result Will Appear Here</span><br><br>
+    <span id="subtraction">Subtraction Result Will Appear Here</span><br><br>
+    <span id="multiplication">Multiplication Result Will Appear Here</span><br><br>
+    <span id="division">Division Result Will Appear Here</span><br><br>
+    <hr><hr>
+
+    <label for="url">URL :</label>
+    <input id="url" type="text" placeholder="Enter Image URL "><br><br>
+    <label for="color">Choose Border Color :</label>
+    <input type="color" id="color"><br><br>
+    <label for="imageSize">Select Image Size :</label>
+    <input type="range" id="imageSize"><br><br>
+    <button onclick=displayImage()>Show Image</button><br>
+    <img id="image">
+</body>
+</html>
