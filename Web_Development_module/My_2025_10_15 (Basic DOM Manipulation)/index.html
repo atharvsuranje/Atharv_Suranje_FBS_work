@@ -5,27 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Manipulation</title>
     <script>
-        function add(){
+        function calculate(operation){
             val1 = parseInt(document.getElementById("input1").value);  
             val2 = parseInt(document.getElementById("input2").value); 
-            document.getElementById("addition").innerText = val1+val2
-        }
-        function subtract(){
-            val1 = parseInt(document.getElementById("input1").value);  
-            val2 = parseInt(document.getElementById("input2").value); 
-            document.getElementById("subtraction").innerText = val1-val2
-        }
-        function multiply(){
-            val1 = parseInt(document.getElementById("input1").value);  
-            val2 = parseInt(document.getElementById("input2").value); 
-            document.getElementById("multiplication").innerText = val1*val2
-        }
-        function divide(){
-            val1 = parseInt(document.getElementById("input1").value);  
-            val2 = parseInt(document.getElementById("input2").value); 
-            document.getElementById("division").innerText = val1/val2
-        }
+            if(operation == '+') result=val1+val2;
+            else if(operation == '-') result=val1-val2;
+            else if(operation == '*') result=val1*val2;
+            else result=val1/val2;
+            document.getElementById("result").innerText = `Result is ${result}`
 
+            
+        }
+        
         function displayImage(){
             imageUrl=document.getElementById("url").value
             borderColor=document.getElementById("color").value
@@ -42,14 +33,11 @@
     <input id="input1" type="text" placeholder="Enter 1st Number"><br><br>
     <label for="input2">Input 2 :</label>
     <input id="input2" type="text" placeholder="Enter 2nd Number"><br><br>
-    <button onclick=add()>Add</button>
-    <button onclick=subtract()>Subtract</button>
-    <button onclick=multiply()>Multiply</button>
-    <button onclick=divide()>Divide</button><br><br>
-    <span id="addition">Addition Result Will Appear Here</span><br><br>
-    <span id="subtraction">Subtraction Result Will Appear Here</span><br><br>
-    <span id="multiplication">Multiplication Result Will Appear Here</span><br><br>
-    <span id="division">Division Result Will Appear Here</span><br><br>
+    <button onclick="calculate('+')">Add</button>
+    <button onclick="calculate('-')">Subtract</button>
+    <button onclick="calculate('*')">Multiply</button>
+    <button onclick="calculate('/')">Divide</button><br><br>
+    <span id="result">Result Will Appear Here</span><br><br>
     <hr><hr>
 
     <label for="url">URL :</label>
