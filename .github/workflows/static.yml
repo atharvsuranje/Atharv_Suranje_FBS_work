@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: 'https://github.com/atharvsuranje/Atharv_Suranje_FBS_work/tree/main/Web_Development_module/Calculator'
+          path: '/Calculator'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
