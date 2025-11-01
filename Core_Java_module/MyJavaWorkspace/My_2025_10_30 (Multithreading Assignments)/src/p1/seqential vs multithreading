@@ -1,0 +1,15 @@
+for 300 entries each 
+Sequential Execution time: 11.2726 ms
+Multithreading Execution time: 17.7512 ms
+
+for 15000 entries each
+Sequential Execution time: 218.0961 ms
+Multithreading Execution time: 498.9326 ms
+
+if i just read both files
+Sequential Execution time: 34.54 ms
+Multithreading Execution time: 22.1057 ms
+
+if i add a 1ms sleep interval after syso
+Sequential Execution time: 68624.8812 ms
+Multithreading Execution time: 34553.5075 ms
