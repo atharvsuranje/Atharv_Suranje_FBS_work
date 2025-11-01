@@ -1,0 +1,29 @@
+/.metadata/
+*.tmp
+*.bak
+*.swp
+.settings/
+.project
+.classpath
+
+# === Java ===
+*.class
+*.jar
+*.war
+*.ear
+*.log
+
+# === Common build folders ===
+bin/
+build/
+dist/
+target/
+out/
+
+# === IDE / Editor folders ===
+.vscode/
+.idea/
+*.iml
+
+apache-tomcat-10.1.48/
+mysql-connector-j-8.0.33/
