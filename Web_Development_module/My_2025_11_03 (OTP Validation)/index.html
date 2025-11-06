@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div>
+        <label for="mobileNo">Mobile No :</label>
+        <input type="number" placeholder="Enter Mobile Number" id="mobileNo">
+        <span id="mobileNoSpan"></span> 
+        
+        <button id="sendOtpBtn" disabled>Send OTP</button>
+        <br>
+        <span id="timerSpan"></span>
+
+        <label for="otp" id="otpLabel">OTP :</label>
+        <input type="text" placeholder="Enter OTP" id="otp">
+        <span id="otpSpan"></span>
+
+        <button id="verifyOtpBtn" style="display: none;">Verify OTP</button>
+        <span id="verifyOtpSpan"></span>
+    </div>
+</body>
+</html>
