@@ -1,0 +1,16 @@
+<root>
+    <config>
+        <a>
+            <b>
+                <c>hello</c>
+            </b>
+        </a>
+
+        <settings>
+            <option>
+                value
+            </option>
+            </settings>
+        </wrongClosingTag>
+    </config>
+</root>
